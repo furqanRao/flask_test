@@ -24,6 +24,10 @@ def generate_random():
                      "w3345random437-gener57ator7457", "f45lask-app-64564test", "f5464or-a456-remote465-job",
                      "9657sorry-for35-delay111", "in345-submissi43o55n"]
     count = 0
+    try:
+        Path('output.txt').stat().st_size
+    except:
+        open('output.txt', 'a')
     while Path('output.txt').stat().st_size < 190000:
         real_number = random.uniform(10, 100000)
         integer = random.randint(10, 1000000)
