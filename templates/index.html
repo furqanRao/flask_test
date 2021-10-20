@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskBlog</title>
+</head>
+<body>
+   <h1>Please Click the Generate Button below to generate random numbers file</h1>
+    <a type="button" href="{{ url_for('.generate_random') }}">Generate</a><br><br>
+    <a href="{{ url_for('.download_file') }}">Click this Link to Download</a><br><br>
+    <a href="{{ url_for('.report') }}">Report</a><br><br>
+    <span>Alphabetical String: {{string_}}</span><br><br>
+    <span>Real Numbers: {{real_number}}</span><br><br>
+    <span>Integers: {{integer}}</span><br><br>
+    <span>Alphanumerics: {{alpha_numeric}}</span>
+    {% if message %}
+        <br><span style="color:red;">{{message}}</span>
+    {% endif %}
+</body>
+</html>
